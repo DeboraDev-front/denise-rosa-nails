@@ -1,0 +1,47 @@
+:root{
+    /*cores bases */
+    --color-off-white: #faf9f8;
+    --color-nude: #e6c7c2;
+    --color-nude-light: #f2dedb;
+    --color-rose-accent: #d8a7a1;
+
+    /* Detalher*/
+    --color-silver: #c7c7cc;
+    --color-silver-light: rgba(199, 199, 204, 0.4);
+
+    /*texto*/
+    --color-text-primary: #2b2b2b;
+    --color-text--secondary: #6b6b6b;
+    --color-text-light: #ffffff;
+
+    /*fundos*/
+    --bg-main: var(--color-off-white);
+    --bg-section: #ffffff;
+    --bg-soft: var(--color-nude-light);
+
+    /* cta */
+    --color-cta: var(--color-rose-accent);
+    --color-cta-hover:#c48f8a;
+
+    /* tipografia*/
+    --font-title:'Playfair Display', serif;
+    --font-body:'Inter', sans-serif;
+
+    /*  Espaçamentos (escala 8px) */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 40px;
+    --space-xl: 64px;
+
+    /* Bordas e sombras */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.06);
+
+
+
+
+}

@@ -1,0 +1,28 @@
+@import url(./variables.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-body);
+    background-color: var(--bg-main);
+    color: var(--color-text-primary);
+}
+
+h1,h2,h3{
+    font-family: var(--font-title);
+}
+
+.button-primary{
+    background-color: var(--color-cta);
+    color: var(--color-text-light);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    transition: background-color 0.3 ease;
+}
+
+.button-primary:hover{
+    background-color: var(--color-cta-hover);
+}
