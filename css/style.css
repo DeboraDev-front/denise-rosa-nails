@@ -288,6 +288,83 @@ section {
   font-size: 1.05rem;
 }
 
+.agenda{
+  background-image: url(../images/bg-agenda.JPG);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: var(--space-lg) 0;
+  text-align: center;
+  color: var(--color-text-primary);
+  position: relative;
+}
+
+.agenda::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.2); /* leve overlay */
+  z-index: 0;
+}
+
+.agenda .container {
+  position: relative; /* garante que o texto fique acima da overlay */
+  z-index: 1;
+}
+
+.agenda h2{
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+  font-style: italic;
+}
+
+.agenda p{
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  max-width: 500px;
+  margin: 0 auto var(--space-md);
+}
+
+.agenda .button-primary{
+  margin-top: var(--space-md);
+}
+
+.payment-info{
+  margin-top: var(--space-lg);
+  font-size: 1rem;
+  color: var(--color-text-primary);
+}
+
+.payment-info h3{
+  font-size: 1.2rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-rose-accent);
+}
+
+.payment-info ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: var(--space-sm);
+}
+
+.payment-info ul li{
+  background-color: var(--color-cta);
+  color: var(--color-text-light);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+}
+
+.payment-info .note{
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: 5px;
+
+}
+
 
 /* GALLERY */
 .gallery-grid {
