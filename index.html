@@ -4,14 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Denise Rosa | Nail Designer</title>
-  <meta name="description" content="Estúdio de manicure especializado em unhas cuidadas, elegantes e com atendimento personalizado." />
+  <!-- SEO Básico -->
+  <title>Denise Rosa | Nail Designer em Canoas RS</title>
+  <meta name="description" content="Denise Rosa é nail designer em Canoas RS, especializada em manicure, pedicure, unhas em gel e atendimento personalizado com hora marcada." />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- SEO Local -->
+  <meta name="geo.region" content="BR-RS">
+  <meta name="geo.placename" content="Canoas">
+  <meta name="geo.position" content="-29.9128;-51.1857">
+  <meta name="ICBM" content="-29.9128, -51.1857">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Denise Rosa | Nail Designer em Canoas RS">
+  <meta property="og:description" content="Unhas cuidadas, elegantes e atendimento personalizado em Canoas RS. Agende seu horário.">
+  <meta property="og:url" content="https://deboradev-front.github.io/denise-rosa-nails/">
+  <meta property="og:image" content="https://deboradev-front.github.io/denise-rosa-nails/images/foto-hero.JPG">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,23 +39,25 @@
 <body>
 
 <header class="hero">
-  <nav class="navbar">
+  <nav class="navbar"  role="navigation" aria-label="Menu principal">
     <div class="container nav-content">
-      <span class="logo">Denise <span>Rosa</span></span>
+          <a href="#top" class="logo">
+            Denise <span>Rosa</span>
+          </a>
 
-      <button class="nav-toggle" aria-label="Abrir menu">
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#galeria">Galeria</a></li>
         <li>
-          <a href="https://www.instagram.com/deniserosa_nails" target="_blank" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
+          <a href="https://www.instagram.com/deniserosa_nails" target="_blank" rel="noopener" aria-label="Instagram da Denise Rosa">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
           </a>
         </li>
         <li><a href="#agenda" class="nav-cta">Agendar</a></li>
@@ -48,12 +70,13 @@
     <div class="hero-text">
       <h1>Unhas que refletem cuidado e <span>elegância</span> </h1>
       <p>Atendimento personalizado, com foco em beleza, conforto e qualidade.</p>
+      <p>Atendimento em Canoas e região.</p>
 
       <a href="#agenda" class="button-primary">Agendar horário</a>
     </div>
 
     <div class="hero-photo">
-      <img src="images/foto-hero.JPG" alt="Denise Rosa - Nail Designer">
+      <img src="images/foto-hero.JPG" alt="Denise Rosa, nail designer profissional, em foto de apresentação do estúdio">
     </div>
   </div>
 </header>
@@ -66,13 +89,13 @@
         <h2>Sobre mim</h2>
         <p>
           Oi, maravilhosas!
-          Me chamo Denise Rosa, sou manicure e nail designer há 9 anos, transformando unhas em arte e autoestima em confiança.
+          Me chamo Denise Rosa, sou manicure e nail designer <span>há 9 anos</span>, transformando unhas em arte e autoestima em confiança.
           Aqui, cada detalhe é feito com amor, cuidado e dedicação, para que você se sinta ainda mais confiante e especial.
         </p>
       </div>
 
       <div class="about-image">
-        <img src="images/about-img.png" alt="Nail designer em atendimento no estúdio">
+        <img src="images/about-img.png" alt="Nail designer">
       </div>
     </div>
   </section>
@@ -95,12 +118,12 @@
 
           <footer class="testimonial-author">
             <strong>Mariana Silva</strong>
-            <div class="testimonial-stars" aria-label="Avaliação 5 estrelas">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+            <div class="testimonial-stars" aria-label="Avaliação:5 de 5 estrelas">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
             </div>
           </footer>
         </article>
@@ -229,9 +252,14 @@
   <section class="agenda" id="agenda">
     <div class="container">
       <h2>Agende seu horário</h2>
-      <p>Atendimento com horário marcado. Clique no botão abaixo para agendar via WhatsApp.</p>
+      <p>Atendendo em Canoas (RS), com horário marcado.. Clique no botão abaixo para agendar via WhatsApp.</p>
 
-      <a href="https://wa.me/5551986134158" target="_blank" class="button-primary">
+      <a 
+        href="https://wa.me/5551986134158"
+        target="_blank"
+        rel="noopener"
+        class="button-primary"
+        aria-label="Agendar horário com Denise Rosa pelo WhatsApp">
         Falar no WhatsApp
       </a>
 
@@ -259,14 +287,14 @@
         <img src="images/soft-gel.JPG" alt="Alongamento soft gel">
         <img src="images/tradicional.JPG" alt="Esmaltação tradicional">
         <img src="images/pe-tradicional.JPG" alt="Pedicure tradicional">
-        <img src="images/galeria1.JPG" alt="Pedicure tradicional">
-        <img src="images/galeria2.JPG" alt="Pedicure tradicional">
-        <img src="images/galeria3.JPG" alt="Pedicure tradicional">
-        <img src="images/galeria4.JPG" alt="Pedicure tradicional">
-        <img src="images/galeria5.JPG" alt="Pedicure tradicional">
-        <img src="images/galeria6.JPG" alt="Pedicure tradicional">
-        <img src="images/galeria7.JPG" alt="Pedicure tradicional">
-        <img src="images/galeria8.JPG" alt="Pedicure tradicional">
+        <img src="images/galeria1.JPG" alt="esmaltação em gel,unha decorada">
+        <img src="images/galeria2.JPG" alt="esmaltação em gel, unha decorada para o natal">
+        <img src="images/galeria3.JPG" alt="esmaltação em gel unha decorada branco e dourado">
+        <img src="images/galeria4.JPG" alt="esmaltação em gel unha decoradal de vermelho e prata">
+        <img src="images/galeria5.JPG" alt="esmaltação em gel unha decorada com corações vermelhos e pequenas pedras de brilho">
+        <img src="images/galeria6.JPG" alt="esmaltação em gel, unha decorada com efeito tigrado">
+        <img src="images/galeria7.JPG" alt="esmaltação em gel unha decorada com corações">
+        <img src="images/galeria8.JPG" alt="Pedicure tradicional, unha vermelha">
 
       </div>
     </div>
@@ -285,13 +313,15 @@
   const body = document.body;
 
   toggle.addEventListener("click", () => {
-    body.classList.toggle("nav-open");
+    const isOpen = body.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", isOpen);
   });
 
   // Fecha o menu ao clicar em qualquer link
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
       body.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
     });
   });
 
@@ -303,6 +333,7 @@
       !e.target.closest(".nav-toggle")
     ) {
       body.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
     }
   });
 </script>

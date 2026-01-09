@@ -285,6 +285,11 @@ section {
   margin: 0 auto;
 }
 
+.about-text p span{
+  color:#aa4a66;
+  font-weight: 500;
+}
+
 .about-image img {
   border-radius: var(--radius-lg);
   box-shadow:0 15px 35px rgba(0, 0, 0, 0.12) ;
@@ -701,7 +706,8 @@ font-size: 1.8rem;
 
 .about-text p{
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  line-height: 1.75;
 }
 
 .testimonials .container {
