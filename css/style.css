@@ -77,26 +77,26 @@ h1, h2, h3 {
 }
 
 /* NAVBAR */
+
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-
 }
 
 .nav-content {
   background: rgba(255, 255, 255, 0.9);
   padding: var(--space-sm) var(--space-md);
-}
 
-.nav-content .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* LOGO */
 .logo {
   font-size: 1.2rem;
   font-family: var(--font-title);
@@ -106,11 +106,70 @@ h1, h2, h3 {
   color: var(--color-rose-accent);
 }
 
-.nav-links {
-  display: none;
-  list-style: none;
-  gap: var(--space-md);
+/* BOTÃO HAMBURGUER */
+.nav-toggle {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 110;
 }
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* MENU MOBILE (overlay) */
+.nav-links {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+
+  list-style: none;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.nav-links a {
+  font-size: 1.4rem;
+}
+
+/* MENU ABERTO */
+body.nav-open .nav-links {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* ANIMAÇÃO DO BOTÃO */
+body.nav-open .nav-toggle span:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+
+body.nav-open .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+body.nav-open .nav-toggle span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
 
 /* HERO */
 .hero {
@@ -502,10 +561,21 @@ font-size: 1.8rem;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
 }
+  .nav-toggle {
+    display: none;
+  }
 .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
+    position: static;
+    inset: auto;
+    background: none;
+    backdrop-filter: none;
+
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+
+    gap: 1.6rem;
 }
 .nav-links a{
   font-size: 1.05rem;
@@ -631,6 +701,7 @@ font-size: 1.8rem;
 
 .about-text p{
   margin: 0;
+  font-size: 1.2rem;
 }
 
 .testimonials .container {

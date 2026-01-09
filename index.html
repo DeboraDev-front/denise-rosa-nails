@@ -23,6 +23,12 @@
     <div class="container nav-content">
       <span class="logo">Denise <span>Rosa</span></span>
 
+      <button class="nav-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <ul class="nav-links">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Serviços</a></li>
@@ -36,6 +42,7 @@
       </ul>
     </div>
   </nav>
+
 
   <div class="container hero-container">
     <div class="hero-text">
@@ -58,8 +65,9 @@
       <div class="about-text">
         <h2>Sobre mim</h2>
         <p>
-          Sou nail designer especializada em cuidados com as unhas, oferecendo
-          um atendimento próximo, profissional e pensado para o bem-estar de cada cliente.
+          Oi, maravilhosas!
+          Me chamo Denise Rosa, sou manicure e nail designer há 9 anos, transformando unhas em arte e autoestima em confiança.
+          Aqui, cada detalhe é feito com amor, cuidado e dedicação, para que você se sinta ainda mais confiante e especial.
         </p>
       </div>
 
@@ -269,6 +277,39 @@
 <footer class="footer">
   <p>© 2026 • Denise Rosa | Nail Designer • Todos os direitos reservados</p>
 </footer>
+
+
+
+<script>
+  const toggle = document.querySelector(".nav-toggle");
+  const body = document.body;
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("nav-open");
+  });
+
+  // Fecha o menu ao clicar em qualquer link
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      body.classList.remove("nav-open");
+    });
+  });
+
+  // Fecha ao clicar fora
+  document.addEventListener("click", (e) => {
+    if (
+      body.classList.contains("nav-open") &&
+      !e.target.closest(".nav-links") &&
+      !e.target.closest(".nav-toggle")
+    ) {
+      body.classList.remove("nav-open");
+    }
+  });
+</script>
+
+
+
+
 
 </body>
 </html>
